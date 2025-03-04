@@ -1,0 +1,47 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url("img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  font-family: cursive;
+}
+h1 {
+  color:aliceblue;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+.container {
+  width: 900px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.polaroid {
+  width: 250px;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border: 10px solid orange;
+  border-bottom-width: 50px;
+}
+
+.polaroid p {
+  position: absolute;
+  bottom: 10px;
+  font-size: 20px;
+  width: 280px;
+  text-align: center;
+  color: purple;
+}
