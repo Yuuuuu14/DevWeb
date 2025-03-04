@@ -1,0 +1,24 @@
+body {
+    background-color: blue;
+}
+.body {
+    font: 1.2em / 1.5 sans-serif;
+  }
+  
+  .box span {
+    background-color: pink;
+    border: 5px solid black;
+    padding: 1em;background-color: pink;
+    border: 5px solid black;
+    padding: 1em;
+    display: inline-block;
+  }
+  .box2 span {
+    background-color:;
+  }
+  .box3 span {
+    background-color: black;
+  }
+  .box3 {
+    background-color: white;
+  }
