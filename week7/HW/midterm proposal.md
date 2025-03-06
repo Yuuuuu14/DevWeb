@@ -1,5 +1,5 @@
 # Theme:a website made for people who hard to make a decision #
-## insipiration: ##
+## inspiration: ##
 1. I have a person who always hard ro decide what to eat for lunch/dinner, even for the trip I will hesitate for a long time. This website could help me save many time to make a quick decision
 2. website: https://toolshu.com/en/eat (this is not my inspiration website but I want to build a website that has similar function like this)
 ## skill contained ##
