@@ -1,0 +1,21 @@
+body{
+    background-color: bisque;
+}
+h1 {
+    align-items: center;
+    justify-items: center;
+}
+.guideline {
+    background-color: wheat;
+    width: fit-content;
+    text-align: center;
+}
+.guide1{
+    padding: 1em;
+}
+.guide2{
+    padding: 1em;
+}
+.guide3{
+    padding: 1em;
+}
