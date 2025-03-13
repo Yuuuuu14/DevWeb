@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>hello java</title>
+        <style>
+            body{
+                background-color: sandybrown;
+            }
+            button{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: x-large;
+                text-transform: uppercase;
+                border: 2px solid lavender;
+                background-color: violet;
+                color: aqua;
+                box-shadow: 5px 5px 2px;
+            }
+            .center{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+        <button tyoe="button">Player 1:Unknown</button>
+        </div>
+        <script>
+            function updateNmae(){
+                const name= prompt("Enter a new name!")
+                button.textContent ="Player 1 :";
+            }
+            const button = document.querySelector("button");
+            button.addEventListener("click",updateNmae);
+        </script>
+    </body>
+</html>
