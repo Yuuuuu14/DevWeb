@@ -13,6 +13,7 @@ body {
 
 .guide1 {
     padding: 1em;
+    background-color: aquamarine;
 }
 
 .guide2 {
@@ -21,4 +22,5 @@ body {
 
 .guide3 {
     padding: 1em;
+    background-color: coral;
 }

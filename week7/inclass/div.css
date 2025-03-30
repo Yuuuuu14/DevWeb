@@ -1,0 +1,26 @@
+.mycontainer {
+    width:100%;
+    overflow:auto;
+}
+.city {
+    width: 100%;
+    float: left;
+    background-color:#fff4a3;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+  }
+div {
+    width: 300px;
+    margin: auto;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+  .mycontainer {
+    display: flex;
+  }
+  .mycontainer > div {
+    width: 33%;
+  }
