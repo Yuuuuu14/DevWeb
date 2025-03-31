@@ -1,12 +1,12 @@
 .box {
-    width: 200px;
+    width: 220px;
     height: fit-content;
     border: dotted;
 }
 
 img {
-    max-width: 100%;
-    border: 10px solid teal;
+    width:200px;
+    border: 11px solid teal;
     border-radius: 10px;
 }
 

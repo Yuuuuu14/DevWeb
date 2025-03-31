@@ -17,6 +17,7 @@ body{
     background-color: rgb(214, 166, 245);
     position: sticky;
     top: 0;
+    z-index: 1000; /* Ensure guideline stays above other elements */
   }
   .guideline a {
     float: left;
@@ -93,3 +94,48 @@ body{
     justify-content: center;
     align-items: center;
  }
+ .textContainer {
+  position: relative;
+}
+.textImg {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+
+.textCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  border: dotted 3px darkorange;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 20px;
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 20px;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 20px;
+}
