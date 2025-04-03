@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Paper Scissor Stone</title>
+        <style>
+            button {
+                background-color: green;
+                color:white;
+            }
+            .reset{
+                background-color: red;
+                color:white;
+            }
+            /* .body{
+                display: flex;
+                justify-content: center;
+            } */
+        </style>
+    </head>
+    <body>
+        <h1>Paper Scissor Stone</h1>
+        <p align="center">
+            Rock beats Scissors.
+            <br>Scissors beats Paper.
+            <br>Paper beats Rock.
+          </p>
+          <div class="body">
+            <label for="play">click your choice</label>
+            <!-- <select id="play" class="play"> -->
+              <br><button id="rock" class="rock">Rock</button>
+              <button id="paper" class="paper">Paper</button>
+              <button id="scissors" class="scissors">Scissors</button>
+              <br><button id="reset" class="reset">Reset</button>
+          </div><div class="resultParas">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="winorloss"></p>
+          </div>
+      <script>
+        //  const resultDisplay = document.getElementById("result");
+        //  const resetButton = document.getElementById("reset");
+        function playgame(userGuess){
+            const choices = ["paper", "scissors", "stone"];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+        }
+        document
+        .getElementById("scissors")
+        .addEventListener("click", () => userGuess("scissors"));
+        document
+        .getElementById("rock")
+        .addEventListener("click", () => userGuess("rock"));
+        document
+        .getElementById("paper")
+        .addEventListener("click", () => userGuess("paper"));
+        const resetButton = document.getElementById("Button");
+        if (userGuess === computerChoice) {
+            lastResult.textContent = "It's a tie!";
+            lastResult.style.backgroundColor = "yellow";
+            setGameOver();
+        } else if (userGuess === "rock" && computerChoice === "scissors") {
+            lastResult.textContent = "You win! Rock beats Scissors!";
+            lastResult.style.backgroundColor = "green";
+            setGameOver();
+        } else if (userGuess === "scissors" && computerChoice === "paper") {
+            lastResult.textContent = "You win! Scissors beats Paper!";
+            lastResult.style.backgroundColor = "green";
+            setGameOver();
+        } else if (userGuess === "paper" && computerChoice === "rock") {
+            lastResult.textContent = "You win! Paper beats Rock!";
+            lastResult.style.backgroundColor = "green";
+            setGameOver();
+        } else {
+            lastResult.textContent = `You lose! ${computerChoice} beats ${userGuess}!`;
+            lastResult.style.backgroundColor = "red";
+            setGameOver();
+        }
+   
+
+      </script>
+    </body>
+</html>
