@@ -1,0 +1,43 @@
+<html>
+    <head></head>
+    <body>
+
+        <script>
+        const shopping = ["ice", "milk", "egg", "cider", "tiramisu"];
+        document.write("<p>Shopping list: " + shopping + "</p>");
+
+        document.write("<p>Shopping length: " + shopping.length + "</p>");
+
+        document.write("<p>First shopping item: " + shopping[0] + "</p>");
+
+        shopping[0] = "lamb";
+        document.write("<p>Updated shopping list: " + shopping + "</p>");
+
+        const fruits = ["Apple", "Pear", "Banana", "Peach"];
+
+        document.write("<p>Index of Pear: " + fruits.indexOf("Pear") + "</p>");
+        document.write("<p>Index of Peach: " + fruits.indexOf("Peach") + "</p>");
+
+        const newLength = fruits.push("Mango");
+        document.write("<p>Fruits after push: " + fruits + "</p>");
+        document.write("<p>New length after push: " + newLength + "</p>");
+
+        fruits.unshift("Lemon");
+        document.write("<p>Fruits after unshift: " + fruits + "</p>");
+
+        fruits.pop();
+        document.write("<p>Fruits after pop: " + fruits + "</p>");
+
+        const removedFruit = fruits.pop();
+        document.write(removedFruit);
+        
+        fruits.shift();
+        document.write("<p>Fruits after shift: " + fruits + "</p>");
+
+        const index = cities.indexOf("Liverpool");
+        if (index !== -1) {
+            cities.splice(index, 1);
+            document.write("<p>Removed Liverpool from cities: " + cities + "</p>");}
+        </script>
+    </body>
+</html>
