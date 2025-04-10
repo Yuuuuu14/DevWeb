@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      padding: 20px;
+    }
+
+    .grocery-item {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .grocery-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-right: 15px;
+    }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>🛒 My Shopping List</h1>
+        <div id="list"></div>
+        <input type="text" id="newItem" placeholder="Add a new item">
+        <button onclick="addItem()">Add to Front (unshift)</button>
+        <button onclick="removeLast()">Remove Last (pop)</button>
+
+        <script>
+            const shopping = ["ice", "milk", "egg", "cider", "tiramisu"];
+            shopping[0] = "lamb";
+
+            function getImage(item) {
+            const images = {
+                "lamb": "https://www.thespruceeats.com/thmb/PxT2MOIFi740X2vXGrjutLNGdHA=/4500x3000/filters:fill(auto,1)/traditional-lamb-roast-recipe-256302-hero-01-2d61427d8c264d9e8f2c12a771e75414.jpg",
+                "milk": "https://static.vecteezy.com/system/resources/previews/017/340/365/original/transparent-glass-of-fresh-milk-png.png",
+                "egg": "https://eskipaper.com/images/eggs-1.jpg",
+                "cider": "https://thestayathomechef.com/wp-content/uploads/2013/09/Slow-Cooker-Apple-Cider-1-2848x4272.jpg",
+                "tiramisu": "https://sallysbakingaddiction.com/wp-content/uploads/2019/06/homemade-tiramisu-2.jpg"
+            };
+            return images[item.toLowerCase()] || "https://via.placeholder.com/50";
+            }
+
+            function showList() {
+            const listDiv = document.getElementById("list");
+            listDiv.innerHTML = "";
+
+            if (shopping.length === 0) {
+                listDiv.innerHTML = "<p>The shopping list is empty.</p>";
+                return;
+            }
+
+            for (let i = 0; i < shopping.length; i++) {
+                const item = shopping[i];
+                const image = getImage(item);
+
+                listDiv.innerHTML += `
+                <div class="grocery-item">
+                    <img src="${image}" alt="${item}">
+                    <span>${i + 1}. ${item}</span>
+                </div>`;
+            }
+            }
+
+            function addItem() {
+            const input = document.getElementById("newItem");
+            const newItem = input.value.trim();
+            if (newItem !== "") {
+                shopping.unshift(newItem);
+                input.value = "";
+                showList();
+            } else {
+                alert("Please enter an item.");
+            }
+            }
+
+            function removeLast() {
+            if (shopping.length > 0) {
+                shopping.pop();
+                showList();
+            } else {
+                alert("The list is already empty!");
+            }
+            }
+
+            showList();
+        </script>
+    </body>
+</html>
