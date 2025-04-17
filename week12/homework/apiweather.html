@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>weather</title>
+    </head>
+    <body>
+        <h1>Click to see the AQI</h1>
+        <button onclick="loadRandomWeather()">get the weather</button>
+        <div id="weather" style="margin-top: 10px;">no data yet</div>
+
+        <script>
+            const display = document.getElementById("weather");
+            display.innerText = "loading...";
+            async function loadRandomWeather() {
+                const res = await fetch("https://api.waqi.info/feed/here/?token=3979fc8dbe68a12da9a5fd41fba88867085a8a87");
+                const data = await res.json();
+                // const randomData = data[Math.floor(Math.random() * cities.length)];
+                if (data.status === "ok") {
+            const city = data.data.city.name;
+            const aqi = data.data.aqi;
+            display.innerHTML = `City: ${city}<br>(AQI):${aqi}`;
+          }
+           else {
+            display.innerText = "cannot get the weather data";
+          }
+        } 
+       
+        </script>
+    </body>
+</html>
+
+    
