@@ -74,23 +74,29 @@
       // Replace each "..." with the correct code
 
       // 1. Tony's third pet
-      document.getElementById("answer1").textContent = myclass.me.pets[2];
+      document.getElementById("answer1").textContent = myClass.me.pets[2];
 
       // 2. Billy's last name
-      document.getElementById("answer2").textContent = myclass.others[1].lastName;
+      document.getElementById("answer2").textContent = myClass.others[1].lastName;
 
       // 3. The size of the others array
-      document.getElementById("answer3").textContent = myclass.others.length;
+      document.getElementById("answer3").textContent = myClass.others.length;
 
       // 4. The first name of everyone in the others array (using a loop)
       // Hint: You'll need to create a variable to hold all the names, then loop through the array
-      let allNames = myclass.firstName;
+      let allNames = "";
       // ... your for loop here
+      for (let i=0; i< myClass.others.length; i++){
+        allNames += myClass.others[i].firstName;
+        if (i <myClass.others.length - 1){
+          allNames += ", ";
+        }
+      }
 
       document.getElementById("answer4").textContent = allNames;
 
       // 5. Tara's first pet
-      document.getElementById("answer5").textContent = "...";
+      document.getElementById("answer5").textContent = myClass.others[2].pets[0];
     </script>
   </body>
 </html>

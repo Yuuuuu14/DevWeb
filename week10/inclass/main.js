@@ -13,10 +13,10 @@ let year, color, model;
 year = 2020;
 color = "red";
 model = "X5";
-document.getElementById("car").innerHTML = carName + "" + "was my first car." + "It was a " + "color" + "model";
+document.getElementById("car").innerHTML = carName + " " + "was my first car. " + "It was a " + color +" "+ model;
 
 let name = "Yu"
 let age = "20";
 let coding = true;
 
-document.getElementById("demo").innerHTML = "Hello,my name is " + name + "and I am" + age + "years old" + "I am a coder" + coding;
+document.getElementById("demo").innerHTML = "Hello, my name is " + name + " and I am " + age + " years old " + "I am a coder " + "-"+ " "+coding;
