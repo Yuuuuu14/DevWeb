@@ -26,7 +26,6 @@ This site offers a visually interactive randomizer using a spinning wheel. I lik
 - Layout is clean and centered, focusing user attention on the decision tool
 
 **UX Notes:**
-- Visual feedback is essential: animations and color shifts add emotional tone
 - Use colors and font to minimize the anxiety of the users
 - Possibly include light sound effects during wheel spin or result announcement
 
