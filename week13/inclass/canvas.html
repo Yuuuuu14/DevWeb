@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Canvas experiment</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="1500" height="1500"></canvas>
+        <script type="application/javascript">
+    //   function draw() {
+    //     const canvas = document.getElementById("canvas");
+    //     if (canvas.getContext) {
+    //       const ctx = canvas.getContext("2d");
+
+    //       ctx.fillStyle = "rgb(200 0 0)";
+    //       ctx.fillRect(10, 10, 50, 50);
+
+    //       ctx.fillStyle = "rgb(0 0 200 / 50%)";
+    //       ctx.fillRect(30, 30, 50, 50);
+    //       // Draw a filled rectangle
+    //         ctx.fillRect(50, 50, 40, 70);
+
+    //         // Draw a rectangular outline
+    //         ctx.strokeRect(22, 12, 21, 44);
+
+    //         // Clear a rectangular area
+    //         ctx.clearRect(32, 23, 34, 23);
+    //     }
+    //   }
+    //   draw();
+            function draw() {
+            const ctx = document.getElementById("canvas").getContext("2d");
+
+            // Draw background
+            ctx.fillStyle = "rgb(255 221 0)";
+            ctx.fillRect(0, 0, 150, 37.5);
+            ctx.fillStyle = "rgb(102 204 0)";
+            ctx.fillRect(0, 37.5, 150, 37.5);
+            ctx.fillStyle = "rgb(0 153 255)";
+            ctx.fillRect(0, 75, 150, 37.5);
+            ctx.fillStyle = "rgb(255 51 0)";
+            ctx.fillRect(0, 112.5, 150, 37.5);
+
+            // Draw semi transparent rectangles
+            for (let i = 0; i < 10; i++) {
+                ctx.fillStyle = `rgb(255 255 255 / ${(i + 1) / 10})`;
+                for (let j = 0; j < 4; j++) {
+                ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
+                }
+            }
+            }
+            draw();
+    </script>
+    </body>
+</html>
