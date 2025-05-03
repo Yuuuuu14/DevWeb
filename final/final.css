@@ -153,12 +153,12 @@ body {
   }
   /* this is the end of the eat part css */
 
-  /* this is the when to do next part css */
+  /* this is the DIY your selection part css */
   .guide3 {
     width: 300px;
     height: 300px;
     background-color: #E3B871; 
-    background-image: url("about/时钟.png"); 
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/554/841/original/lightbulb-vector-icon.jpg"); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -181,7 +181,7 @@ body {
     border-radius: 2px;
     transition: background-color 0.3s;
   }
-  /* this is the end of the when to do next part css */
+  /* this is the end of the DIY part css */
 
   .whatelse{
     padding-top: 50px;

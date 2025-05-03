@@ -18,19 +18,23 @@
     </head>
     <body>
         <div class="lunch">
-        <!-- <h1 align="center">Sandwiches🥪</h1></div> -->
         <p id="result">loading...</p>
-        <!-- chatgpt does help this java script part -->
+        
+        
         <script>
+        //randomly get to the text I made from the last page
           const params = new URLSearchParams(window.location.search);
           const text = params.get('text');
 
-          document.getElementById('result').textContent = text || '没有内容';
+          document.getElementById('result').textContent = text || 'No content';
+        
+        //click event to back to the former page 
+            //chatgpt does help this java script part   
           document.addEventListener("click", function() {
-          window.location.href ="/midterm/about/eat.html";
+          window.location.href ="/DevWeb/final/about/eat.html";
     });
   </script>
-  <!-- chatgpt part ended reference: https://chatgpt.com/share/67da2fda-763c-8009-8d91-d72c4a917976 -->
+ 
     </body>
     
 </html>
