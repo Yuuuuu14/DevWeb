@@ -1,42 +1,6 @@
 <html>
     <head>
-        <style>
-            body{
-                background-color: rgb(205, 254, 254);
-            }
-            .else{
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                padding-top: 100px;
-                font-family:Georgia, 'Times New Roman', Times, serif;
-            }
-            ul {
-                 list-style-type: none;
-                 margin: 0;
-                 padding: 0;
-                 overflow: hidden;
-                 background-color: rgb(252, 205, 200);
-                 position: fixed;
-                 top: 0;
-                 width: 100%;
-                 left: 0;
-                }
-                li {
-                    float:right;
-                }
-                li a {
-                    display: block;
-                    padding: 10px;
-                    text-decoration: none;
-                    color: black;
-                    font-family:Georgia, 'Times New Roman', Times, serif;
-                    font-size:large;
-                }
-                li a:hover {
-                    background-color: salmon;
-                }
-        </style>
+        <link rel="stylesheet" href="contact form.css">
     </head>
     <body>
         <ul>
@@ -47,11 +11,32 @@
           </ul>
         <div class="else">
         <h1>What else do you want to leave to fate?</h1>
-        
-    </div>
-    <div class="else">
-    <h3>contact me by email</h3>
-    <a href="mailto:yl11519@nyu.edu">yl11519@nyu.edu</a></div>
-    
-</body>
-</html>
+        <form action="https://formspree.io/f/mzzrelyd" class="fs-form" target="_top" method="POST">
+        <div class="fs-field">
+        <label class="fs-label" for="name">Your Name</label>
+        <input class="fs-input" id="name" name="name" required />
+        </div>
+        <div class="fs-field">
+        <label class="fs-label" for="email">Email</label>
+        <input class="fs-input" id="email" name="email" required />
+        <p class="fs-description">
+            This will help me respond to your query via an email.
+        </p>
+        </div>
+        <div class="fs-field">
+        <label class="fs-label" for="message">Message</label>
+        <textarea
+            class="fs-textarea"
+            id="message"
+            name="message"
+            required
+        ></textarea>
+        <p class="fs-description">What would you like to discuss?</p>
+        </div>
+        <div class="fs-button-group">
+        <button class="fs-button" type="submit">Submit</button>
+        </div>
+        </form>
+        </div>
+        </body>
+        </html>

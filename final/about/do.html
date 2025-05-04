@@ -68,6 +68,9 @@
                 width:150px;
                 cursor: pointer;
             }
+            .button2{
+                width:50px
+            }
             label{
                 font-size: 15px;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -108,7 +111,7 @@
     <body>
         <ul>
             <li><a class="active" href="/DevWeb/final/index.html">Home</a></li>
-            <li><a href="/DevWeb/final/about/diy.html">When</a></li>
+            <li><a href="/DevWeb/final/about/diy.html">DIY</a></li>
             <li><a href="/DevWeb/final/about/eat.html">Eat</a></li>
             <li><a href="/DevWeb/final/about/do.html">Do</a></li>
           </ul>
@@ -121,9 +124,9 @@
         <!-- user input by himself -->
         <div class="left"><h2>Already have something in your mind and just hard to decide?</h2>
         <label>Type in what to do next and use "," to seperate</label><br>
-        <input type="text" id="userInput" placeholder="for example: reading, eating, playing games">
-         <button onclick="Randomwithinput()">Random selection</button>
-
+        <input type="text" id="userInput" placeholder="for example: reading, eating, playing games"><br>
+         <button onclick="Randomwithinput()">Random selection</button><br>
+         <button class="button2" onclick="resetAll()">Reset</button>
          <div class="result" id="resultBox"></div>
         </div>
 
@@ -153,6 +156,11 @@
             // show the result
             const randomChoice = options[Math.floor(Math.random() * options.length)];
             document.getElementById("resultBox").textContent = "What to do next is : " + randomChoice;
+            }
+            // reset the input box and result box
+            function resetAll() {
+            document.getElementById("userInput").value = "";
+            document.getElementById("resultBox").innerText = "";
             }
 
         // end of left
