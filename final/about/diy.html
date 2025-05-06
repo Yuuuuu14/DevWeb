@@ -81,6 +81,10 @@
                 font-size:large;
                 padding-top: 20px;
             }
+            .button2{
+                width:86px;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
@@ -101,7 +105,7 @@
             <label>Type in what to do next and use "," to seperate</label><br>
             <input type="text" id="userInput" placeholder="for example: Alice, Bob, Charlie">
              <button onclick="Randomwithinput()">Random selection</button>
-    
+             <button class="button2" onclick="resetAll()">Reset</button>
              <div class="result" id="resultBox"></div>
             </div>
         </div>
@@ -119,6 +123,11 @@
             // show the result
             const randomChoice = options[Math.floor(Math.random() * options.length)];
             document.getElementById("resultBox").textContent = "The random result is : " + randomChoice;
+            }
+            //reset
+            function resetAll() {
+            document.getElementById("userInput").value = "";
+            document.getElementById("resultBox").innerText = "";
             }
         </script>
     </body>
